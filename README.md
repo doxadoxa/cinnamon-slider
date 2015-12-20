@@ -91,3 +91,6 @@ $('.cinnamon').Cinnamon({
 	'onTouchmove' : undefined
 });
 ```
+
+## Demo
+You can find very simple demo in `dist/demo` folder.
