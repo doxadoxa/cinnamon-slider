@@ -18,11 +18,15 @@
 
 			//dots
 			'dots' : true,
-			'dotsClass' : ".cinnamon-dots"
+			'dotsClass' : ".cinnamon-dots",
 
 			//callbacks
-			//'onSlideChange' : function() {},
-			//'onSlideChanged' : function() {}
+			'onInitialize' : undefined,
+			'onSlideChange' : undefined,
+			'onSlideChanged' : undefined,
+			'onTranslating' : undefined,
+			'onTranslated' : undefined,
+			'onTouchmove' : undefined
 
 		}, options);
 
@@ -54,6 +58,29 @@
 				for( var i = 0; i <= slides.width.length - 2; ++i ) {
 					slides.offset.push( slides.width[i] + slides.offset[i] );
 				}
+
+				var diff;
+
+				if ( settings.alignment == 'left' ) {
+					diff = slides.offset[0];
+				}
+
+				if ( settings.alignment == 'right' ) {
+					diff = slides.offset[0] - ( $(window).width() - slides.width[0] );
+				}
+
+				if ( settings.alignment == 'center' ) {
+					diff = slides.offset[0] - ( $(window).width() - slides.width[0] )/2;
+				}
+
+				$stage.css({
+					'-webkit-transform'  : 'translate3d(' + ( - diff ) + 'px,0,0)',
+					'-ms-transform' : 'translate3d(' + ( - diff ) + 'px,0,0)',
+					'transform' : 'translate3d(' + ( - diff ) + 'px,0,0)',
+					'transition' : '0ms'
+				});
+
+				settings.onInitialize && settings.onInitialize();
 			}
 		}
 
