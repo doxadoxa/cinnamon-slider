@@ -5,9 +5,12 @@ Touch friendly slider. Simple, small and fast.
 Cinnamon use jQuery. It's required.
 
 ## Files
-- cinnamon.min.js - minified slider script 
-- cinnamon.min.css - minified base css, required
-- cinnamon.custom.css - additional scripts for start with slider
+Ready to using files are in `dist` folder.
+
+- `js/cinnamon.min.js` - minified slider script 
+- `css/cinnamon.min.css` - minified base css, required
+- `css/cinnamon.custom.css` - additional scripts for start with slider
+- `demo/demo.html` - simple Cinnamon demo
 
 ## How to use
 
