@@ -1,0 +1,31 @@
+.cinnamon-dots {
+	position: relative;
+	z-index: 10;
+	margin-top: -40px;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		list-style: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 20px;
+		border: 2px solid #fff;
+		margin-right: 20px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.active {
+			span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				border-radius: 20px;
+				background-color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.cinnamon {
+	overflow: hidden;
+
+	.cinnamon-stage {
+		width: 10000px;
+		display: flex;
+		justify-content: flex-start;
+		cursor: move;
+	    cursor: grab;
+	    user-select: none;
+        
+        backface-visibility: hidden;
+        perspective: 1000;
+        transform-style: preserve-3d;
+        translate: transform3d(0,0,0);
+
+	    &.active {
+	    	cursor: grabbing;
+	    }
+
+        * {
+            backface-visibility: hidden;
+            perspective: 1000;
+        }
+	}
+}

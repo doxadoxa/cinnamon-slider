@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Demo of Cinnamon slider
+
+		link(rel="stylesheet", href="../css/cinnamon.min.css")
+		link(rel="stylesheet", href="../css/cinnamon.custom.min.css")
+		link(rel="stylesheet", href="../css/demo.min.css")
+
+	body
+		.cinnamon
+			.cinnamon-stage
+				.cinnamon-item
+					.slide-demo(style="background-image: url(http://lorempixel.com/1280/800/abstract)")
+				.cinnamon-item
+					.slide-demo(style="background-image: url(http://lorempixel.com/1280/800/sports)")
+				.cinnamon-item
+					.slide-demo(style="background-image: url(http://lorempixel.com/1280/800/cats)")
+
+
+		script(src="../js/jquery.min.js")
+		script(src="../js/cinnamon.min.js")
+		script.
+			$(".cinnamon").Cinnamon();
